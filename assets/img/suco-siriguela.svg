@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Suco de Siriguela">
+  <rect width="600" height="360" rx="36" fill="#f5c9a8"/>
+  <rect x="241" y="78" width="118" height="218" rx="30" fill="#fff2df"/>
+  <path d="M241 141h118v116c0 22-18 40-40 40h-38c-22 0-40-18-40-40z" fill="#e26b36"/>
+  <circle cx="394" cy="236" r="30" fill="#d94d2d"/><circle cx="421" cy="219" r="22" fill="#f09a3c"/>
+  <path d="M322 76l25-43" stroke="#2d7c4d" stroke-width="10" stroke-linecap="round"/>
+</svg>

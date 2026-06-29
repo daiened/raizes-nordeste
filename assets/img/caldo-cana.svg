@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Caldo de Cana">
+  <rect width="600" height="360" rx="36" fill="#d5e8c3"/>
+  <rect x="238" y="72" width="124" height="226" rx="30" fill="#f8f5dc"/>
+  <path d="M238 136h124v123c0 22-18 40-40 40h-44c-22 0-40-18-40-40z" fill="#d2c653"/>
+  <rect x="402" y="83" width="24" height="190" rx="12" fill="#78a34e" transform="rotate(13 414 178)"/>
+  <rect x="169" y="92" width="24" height="173" rx="12" fill="#87b35c" transform="rotate(-14 181 178)"/>
+</svg>

@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Bolo de Rolo">
+  <rect width="600" height="360" rx="36" fill="#f5d2c4"/>
+  <ellipse cx="300" cy="251" rx="190" ry="44" fill="#c45834" opacity=".22"/>
+  <path d="M167 153c65-77 202-80 270-5 40 44 2 112-71 112H230c-77 0-106-58-63-107z" fill="#fff0cf"/>
+  <path d="M217 172c45-30 118-31 168 1 38 24 23 65-31 65H249c-53 0-67-43-32-66z" fill="none" stroke="#c94d3a" stroke-width="20" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Cuscuz Combo">
+  <rect width="600" height="360" rx="36" fill="#ffe1a8"/>
+  <path d="M176 100h248l-32 190H208z" fill="#d78224"/>
+  <path d="M196 74h208c20 0 36 16 36 36v8H160v-8c0-20 16-36 36-36z" fill="#f5c348"/>
+  <path d="M226 133h148v126H226z" fill="#f8d15d"/>
+  <circle cx="404" cy="255" r="42" fill="#f7f1dd"/><circle cx="418" cy="241" r="12" fill="#c45a24"/>
+  <path d="M164 278c85 28 187 29 270 0" stroke="#7f4a22" stroke-width="18" stroke-linecap="round" fill="none"/>
+</svg>

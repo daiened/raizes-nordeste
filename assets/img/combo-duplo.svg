@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Combo Duplo">
+  <rect width="600" height="360" rx="36" fill="#f0c783"/>
+  <circle cx="218" cy="205" r="72" fill="#d58a28"/><circle cx="218" cy="205" r="52" fill="#6f351b"/>
+  <circle cx="332" cy="205" r="72" fill="#d58a28"/><circle cx="332" cy="205" r="52" fill="#6f351b"/>
+  <rect x="416" y="92" width="54" height="160" rx="18" fill="#f8f0dc"/><path d="M416 151h54v80c0 12-10 22-22 22h-10c-12 0-22-10-22-22z" fill="#c84f2b"/>
+  <path d="M441 89l19-39" stroke="#2d7c4d" stroke-width="9" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Caldinho de Feijão">
+  <rect width="600" height="360" rx="36" fill="#e9c49c"/>
+  <ellipse cx="300" cy="249" rx="184" ry="58" fill="#81431f" opacity=".35"/>
+  <path d="M160 126h280l-26 139c-8 38-48 61-114 61s-106-23-114-61z" fill="#8e4b23"/>
+  <ellipse cx="300" cy="126" rx="140" ry="45" fill="#a95a2a"/>
+  <ellipse cx="300" cy="126" rx="101" ry="27" fill="#6d331b"/>
+  <rect x="372" y="67" width="102" height="23" rx="12" fill="#f4d59f" transform="rotate(22 423 78.5)"/>
+  <circle cx="256" cy="119" r="9" fill="#f6c35f"/><circle cx="323" cy="133" r="8" fill="#f6c35f"/>
+</svg>

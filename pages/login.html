@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login – Raízes do Nordeste</title>
+  <title>Login - Raízes do Nordeste</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #FDF6EE; --card: #FFFFFF;
-      --primary: #B83227; --primary-dk: #8C2018; --primary-lt: #FAEAE8;
-      --accent: #D4820A; --accent-lt: #FEF0D7;
-      --green: #1E8A4C; --green-lt: #D3F0E2;
-      --red-err: #C0392B; --red-lt: #FDECEA;
-      --text: #1C1208; --text2: #5C4A38; --text3: #9C886A;
-      --border: #E8DDD0;
-      --font-display: 'Playfair Display', serif;
-      --font-body: 'DM Sans', system-ui, sans-serif;
-      --radius: 14px; --shadow: 0 4px 24px rgba(0,0,0,.10);
+      --bg: #ffffff;
+      --card: #ffffff;
+      --primary: #B65332;
+      --primary-dk: #8F3A25;
+      --primary-lt: #F7E7DE;
+      --accent: #C9902E;
+      --green: #356B45;
+      --green-lt: #E7F0E8;
+      --red-err: #b23b2a;
+      --red-lt: #f8ded1;
+      --text: #2B1D16;
+      --text2: #5F4A3E;
+      --text3: #8A766B;
+      --border: #E8D8C7;
+      --font-display: 'Lora', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --radius: 8px;
+      --shadow: 0 18px 42px rgba(43,29,22,.12);
       --transition: 0.2s ease;
     }
     body {
@@ -27,113 +35,79 @@
       color: var(--text);
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 24px 16px;
     }
-    /* BG decorativo */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 40% at 80% 10%, rgba(184,50,39,.08) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 50% at 10% 90%, rgba(212,130,10,.07) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* CARD */
+    button, input { font: inherit; }
+    button { cursor: pointer; }
     .card {
       background: var(--card);
       border-radius: var(--radius);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      padding: 36px 32px 32px;
+      padding: 34px 30px 28px;
       width: 100%;
-      max-width: 400px;
-      position: relative;
-      z-index: 1;
-      animation: slideUp .35s ease both;
+      max-width: 410px;
+      animation: slideUp .3s ease both;
     }
     @keyframes slideUp {
-      from { opacity:0; transform:translateY(16px) }
-      to   { opacity:1; transform:translateY(0) }
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    /* LOGO */
     .logo {
       font-family: var(--font-display);
-      font-size: 26px;
-      font-weight: 900;
+      font-size: 28px;
+      font-weight: 700;
       color: var(--primary);
       text-align: center;
       margin-bottom: 4px;
     }
-    .logo span { color: var(--accent); }
+    .logo span { color: var(--green); }
     .logo-sub {
       text-align: center;
       font-size: 13px;
       color: var(--text3);
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
-
-    /* TABS */
     .tabs {
       display: flex;
       border: 1px solid var(--border);
-      border-radius: 30px;
+      border-radius: var(--radius);
       overflow: hidden;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      background: #fff;
     }
     .tab {
       flex: 1;
-      padding: 9px;
+      padding: 10px;
       text-align: center;
       font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
+      font-weight: 800;
       border: none;
-      background: none;
-      font-family: var(--font-body);
+      background: transparent;
       color: var(--text3);
       transition: all var(--transition);
     }
-    .tab.active {
-      background: var(--primary);
-      color: #fff;
-      border-radius: 30px;
-    }
-
-    /* FORM */
+    .tab.active { background: var(--primary); color: #fff; }
     .form { display: flex; flex-direction: column; gap: 14px; }
     .field { display: flex; flex-direction: column; gap: 5px; }
     label {
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 800;
       color: var(--text2);
       text-transform: uppercase;
-      letter-spacing: .6px;
+      letter-spacing: .5px;
     }
     .input-wrap { position: relative; }
-    .input-wrap .icon {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 15px;
-      pointer-events: none;
-    }
     input[type="text"],
     input[type="email"],
     input[type="password"],
     input[type="tel"] {
       width: 100%;
-      padding: 11px 14px 11px 38px;
+      padding: 11px 42px 11px 12px;
       border: 1.5px solid var(--border);
       border-radius: var(--radius);
-      font-family: var(--font-body);
       font-size: 14px;
       color: var(--text);
       background: #fff;
@@ -142,14 +116,11 @@
     }
     input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(184,50,39,.10);
+      box-shadow: 0 0 0 3px rgba(182,83,50,.12);
     }
     input.erro {
       border-color: var(--red-err);
-      box-shadow: 0 0 0 3px rgba(192,57,43,.10);
-    }
-    input.ok {
-      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(178,59,42,.12);
     }
     .msg-erro {
       font-size: 11.5px;
@@ -158,60 +129,51 @@
       padding-left: 2px;
     }
     .msg-erro.visivel { display: block; }
-
-    /* TOGGLE SENHA */
     .toggle-senha {
       position: absolute;
-      right: 12px;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      color: var(--text3);
-      padding: 2px;
+      background: #F7E7DE;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text2);
     }
-
-    /* FORÇA DA SENHA */
     .forca-wrap { display: none; flex-direction: column; gap: 4px; }
     .forca-wrap.visivel { display: flex; }
     .forca-barra {
-      height: 4px;
-      border-radius: 4px;
-      background: var(--border);
+      height: 5px;
+      border-radius: 5px;
+      background: rgba(223,179,111,.65);
       overflow: hidden;
     }
     .forca-fill {
       height: 100%;
-      border-radius: 4px;
+      border-radius: 5px;
       width: 0%;
       transition: width .3s, background .3s;
     }
     .forca-label { font-size: 11px; color: var(--text3); }
-
-    /* ESQUECI SENHA */
     .forgot {
       text-align: right;
       font-size: 12px;
-      color: var(--accent);
+      color: var(--primary);
       cursor: pointer;
       text-decoration: underline;
       margin-top: -6px;
     }
-
-    /* BOTÃO PRINCIPAL */
     .btn-principal {
       width: 100%;
       background: var(--primary);
       color: #fff;
       border: none;
       padding: 13px;
-      border-radius: 30px;
+      border-radius: var(--radius);
       font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: var(--font-body);
+      font-weight: 800;
       transition: background var(--transition), transform var(--transition);
       margin-top: 4px;
       display: flex;
@@ -221,12 +183,11 @@
     }
     .btn-principal:hover { background: var(--primary-dk); }
     .btn-principal:active { transform: scale(.98); }
-    .btn-principal.loading { opacity: .7; cursor: wait; }
-
-    /* SPINNER */
+    .btn-principal.loading { opacity: .72; cursor: wait; }
     .spinner {
-      width: 16px; height: 16px;
-      border: 2px solid rgba(255,255,255,.4);
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,.45);
       border-top-color: #fff;
       border-radius: 50%;
       animation: spin .6s linear infinite;
@@ -235,8 +196,6 @@
     .btn-principal.loading .spinner { display: block; }
     .btn-principal.loading .btn-texto { display: none; }
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* DIVISOR */
     .divisor {
       display: flex;
       align-items: center;
@@ -245,14 +204,13 @@
       font-size: 12px;
       margin: 4px 0;
     }
-    .divisor::before, .divisor::after {
+    .divisor::before,
+    .divisor::after {
       content: '';
       flex: 1;
       height: 1px;
       background: var(--border);
     }
-
-    /* TOAST */
     .toast {
       position: fixed;
       bottom: 24px;
@@ -261,18 +219,16 @@
       background: var(--text);
       color: #fff;
       padding: 10px 20px;
-      border-radius: 30px;
+      border-radius: var(--radius);
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 700;
       transition: transform .3s ease;
       z-index: 999;
       white-space: nowrap;
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
     .toast.sucesso { background: var(--green); }
-    .toast.falha   { background: var(--red-err); }
-
-    /* LGPD */
+    .toast.falha { background: var(--red-err); }
     .lgpd-check {
       display: flex;
       align-items: flex-start;
@@ -289,9 +245,7 @@
       flex-shrink: 0;
       accent-color: var(--primary);
     }
-    .lgpd-check a { color: var(--accent); text-decoration: underline; }
-
-    /* FOOTER */
+    .lgpd-check a { color: var(--primary); text-decoration: underline; }
     .card-footer {
       text-align: center;
       font-size: 12.5px;
@@ -299,402 +253,307 @@
       margin-top: 18px;
     }
     .card-footer a {
-      color: var(--accent);
-      font-weight: 600;
+      color: var(--primary);
+      font-weight: 800;
       cursor: pointer;
       text-decoration: none;
     }
-
-    /* ALERTA DE ERRO GERAL */
     .alerta {
       background: var(--red-lt);
-      border: 1px solid #F5C6C2;
-      border-radius: var(--radius-sm, 8px);
+      border: 1px solid #D8B284;
+      border-radius: var(--radius);
       padding: 10px 14px;
       font-size: 13px;
       color: var(--red-err);
       display: none;
+      margin-bottom: 14px;
     }
     .alerta.visivel { display: block; }
-
     @media (max-width: 440px) {
       .card { padding: 28px 20px 24px; }
     }
   </style>
 </head>
 <body>
+  <div class="card">
+    <div class="logo">Raízes <span>do Nordeste</span></div>
+    <p class="logo-sub">Sabores do sertão com você</p>
 
-<div class="card">
-  <div class="logo">Raízes <span>do Nordeste</span></div>
-  <p class="logo-sub">Sabores do sertão com você</p>
+    <div class="tabs">
+      <button class="tab active" id="tabLogin" onclick="mostrarAba('login')">Entrar</button>
+      <button class="tab" id="tabCadastro" onclick="mostrarAba('cadastro')">Criar conta</button>
+    </div>
 
-  <!-- TABS LOGIN / CADASTRO -->
-  <div class="tabs">
-    <button class="tab active" id="tabLogin" onclick="mostrarAba('login')">Entrar</button>
-    <button class="tab" id="tabCadastro" onclick="mostrarAba('cadastro')">Criar conta</button>
+    <div class="alerta" id="alertaGeral"></div>
+
+    <form class="form" id="formLogin" onsubmit="submitLogin(event)" novalidate>
+      <div class="field">
+        <label for="loginEmail">E-mail</label>
+        <input type="email" id="loginEmail" placeholder="seu@email.com" oninput="limparErro('loginEmail')" />
+        <span class="msg-erro" id="erroLoginEmail">Informe um e-mail válido.</span>
+      </div>
+
+      <div class="field">
+        <label for="loginSenha">Senha</label>
+        <div class="input-wrap">
+          <input type="password" id="loginSenha" placeholder="Sua senha" oninput="limparErro('loginSenha')" />
+          <button type="button" class="toggle-senha" onclick="toggleSenha('loginSenha', this)">Ver</button>
+        </div>
+        <span class="msg-erro" id="erroLoginSenha">Informe sua senha.</span>
+      </div>
+
+      <p class="forgot" onclick="esqueciSenha()">Esqueci minha senha</p>
+
+      <button type="submit" class="btn-principal" id="btnLogin">
+        <span class="spinner"></span>
+        <span class="btn-texto">Entrar</span>
+      </button>
+
+      <div class="divisor">ou continue sem login</div>
+
+      <button type="button" class="btn-principal" style="background:#fff;color:var(--text2);border:1px solid var(--border);font-weight:700" onclick="entrarSemLogin()">
+        <span class="btn-texto">Continuar como visitante</span>
+      </button>
+    </form>
+
+    <form class="form" id="formCadastro" style="display:none" onsubmit="submitCadastro(event)" novalidate>
+      <div class="field">
+        <label for="cadNome">Nome completo</label>
+        <input type="text" id="cadNome" placeholder="Seu nome completo" oninput="limparErro('cadNome')" />
+        <span class="msg-erro" id="erroCadNome">Informe seu nome completo.</span>
+      </div>
+
+      <div class="field">
+        <label for="cadEmail">E-mail</label>
+        <input type="email" id="cadEmail" placeholder="seu@email.com" oninput="limparErro('cadEmail')" />
+        <span class="msg-erro" id="erroCadEmail">Informe um e-mail válido.</span>
+      </div>
+
+      <div class="field">
+        <label for="cadCPF">CPF</label>
+        <input type="text" id="cadCPF" placeholder="000.000.000-00" maxlength="14" oninput="mascaraCPF(this); limparErro('cadCPF')" />
+        <span class="msg-erro" id="erroCadCPF">Informe um CPF válido com 11 dígitos.</span>
+      </div>
+
+      <div class="field">
+        <label for="cadTel">Telefone / WhatsApp</label>
+        <input type="tel" id="cadTel" placeholder="(00) 00000-0000" maxlength="15" oninput="mascaraTel(this); limparErro('cadTel')" />
+        <span class="msg-erro" id="erroCadTel">Informe um telefone válido.</span>
+      </div>
+
+      <div class="field">
+        <label for="cadSenha">Senha</label>
+        <div class="input-wrap">
+          <input type="password" id="cadSenha" placeholder="Mínimo 6 caracteres" oninput="verificarForca(this); limparErro('cadSenha')" />
+          <button type="button" class="toggle-senha" onclick="toggleSenha('cadSenha', this)">Ver</button>
+        </div>
+        <div class="forca-wrap" id="forcaWrap">
+          <div class="forca-barra"><div class="forca-fill" id="forcaFill"></div></div>
+          <span class="forca-label" id="forcaLabel"></span>
+        </div>
+        <span class="msg-erro" id="erroCadSenha">A senha deve ter pelo menos 6 caracteres.</span>
+      </div>
+
+      <div class="field">
+        <label for="cadConfSenha">Confirmar senha</label>
+        <div class="input-wrap">
+          <input type="password" id="cadConfSenha" placeholder="Repita a senha" oninput="limparErro('cadConfSenha')" />
+          <button type="button" class="toggle-senha" onclick="toggleSenha('cadConfSenha', this)">Ver</button>
+        </div>
+        <span class="msg-erro" id="erroCadConfSenha">As senhas não coincidem.</span>
+      </div>
+
+      <label class="lgpd-check">
+        <input type="checkbox" id="cadLGPD" onchange="limparErro('cadLGPD')" />
+        Concordo com a <a href="privacidade.html" target="_blank">Política de Privacidade</a> e o tratamento dos meus dados conforme a <strong>LGPD</strong>.
+      </label>
+      <span class="msg-erro" id="erroCadLGPD">Você precisa aceitar os termos para continuar.</span>
+
+      <button type="submit" class="btn-principal" id="btnCadastro">
+        <span class="spinner"></span>
+        <span class="btn-texto">Criar conta</span>
+      </button>
+    </form>
+
+    <div class="card-footer" id="cardFooterLink">
+      Não tem conta?
+      <a onclick="mostrarAba('cadastro')">Criar conta grátis</a>
+    </div>
   </div>
 
-  <!-- ALERTA GERAL -->
-  <div class="alerta" id="alertaGeral"></div>
+  <div class="toast" id="toast"></div>
 
-  <!-- ===== FORM LOGIN ===== -->
-  <form class="form" id="formLogin" onsubmit="submitLogin(event)" novalidate>
+  <script>
+    const USUARIO_KEY = "usuarioLogado";
 
-    <div class="field">
-      <label for="loginEmail">E-mail</label>
-      <div class="input-wrap">
-        <span class="icon">✉️</span>
-        <input type="email" id="loginEmail" placeholder="seu@email.com"
-               oninput="limparErro('loginEmail')" />
-      </div>
-      <span class="msg-erro" id="erroLoginEmail">Informe um e-mail válido.</span>
-    </div>
+    const USUARIOS = [
+      { email: "teste@raizes.com", senha: "123456", nome: "Maria Nordeste" },
+      { email: "admin@raizes.com", senha: "admin123", nome: "Admin Raízes" },
+    ];
 
-    <div class="field">
-      <label for="loginSenha">Senha</label>
-      <div class="input-wrap">
-        <span class="icon">🔒</span>
-        <input type="password" id="loginSenha" placeholder="Sua senha"
-               oninput="limparErro('loginSenha')" />
-        <button type="button" class="toggle-senha" onclick="toggleSenha('loginSenha', this)">👁️</button>
-      </div>
-      <span class="msg-erro" id="erroLoginSenha">Informe sua senha.</span>
-    </div>
-
-    <p class="forgot" onclick="esqueciSenha()">Esqueci minha senha</p>
-
-    <button type="submit" class="btn-principal" id="btnLogin">
-      <span class="spinner"></span>
-      <span class="btn-texto">Entrar</span>
-    </button>
-
-    <div class="divisor">ou continue sem login</div>
-
-    <button type="button" class="btn-principal"
-            style="background:#fff;color:var(--text2);border:1px solid var(--border);font-weight:500"
-            onclick="entrarSemLogin()">
-      <span class="btn-texto">Continuar como visitante</span>
-    </button>
-
-  </form>
-
-  <!-- ===== FORM CADASTRO (oculto inicialmente) ===== -->
-  <form class="form" id="formCadastro" style="display:none"
-        onsubmit="submitCadastro(event)" novalidate>
-
-    <div class="field">
-      <label for="cadNome">Nome completo</label>
-      <div class="input-wrap">
-        <span class="icon">👤</span>
-        <input type="text" id="cadNome" placeholder="Seu nome completo"
-               oninput="limparErro('cadNome')" />
-      </div>
-      <span class="msg-erro" id="erroCadNome">Informe seu nome completo.</span>
-    </div>
-
-    <div class="field">
-      <label for="cadEmail">E-mail</label>
-      <div class="input-wrap">
-        <span class="icon">✉️</span>
-        <input type="email" id="cadEmail" placeholder="seu@email.com"
-               oninput="limparErro('cadEmail')" />
-      </div>
-      <span class="msg-erro" id="erroCadEmail">Informe um e-mail válido.</span>
-    </div>
-
-    <div class="field">
-      <label for="cadCPF">CPF</label>
-      <div class="input-wrap">
-        <span class="icon">🪪</span>
-        <input type="text" id="cadCPF" placeholder="000.000.000-00"
-               maxlength="14"
-               oninput="mascaraCPF(this); limparErro('cadCPF')" />
-      </div>
-      <span class="msg-erro" id="erroCadCPF">Informe um CPF válido (11 dígitos).</span>
-    </div>
-
-    <div class="field">
-      <label for="cadTel">Telefone / WhatsApp</label>
-      <div class="input-wrap">
-        <span class="icon">📱</span>
-        <input type="tel" id="cadTel" placeholder="(00) 00000-0000"
-               maxlength="15"
-               oninput="mascaraTel(this); limparErro('cadTel')" />
-      </div>
-      <span class="msg-erro" id="erroCadTel">Informe um telefone válido.</span>
-    </div>
-
-    <div class="field">
-      <label for="cadSenha">Senha</label>
-      <div class="input-wrap">
-        <span class="icon">🔒</span>
-        <input type="password" id="cadSenha" placeholder="Mínimo 6 caracteres"
-               oninput="verificarForca(this); limparErro('cadSenha')" />
-        <button type="button" class="toggle-senha" onclick="toggleSenha('cadSenha', this)">👁️</button>
-      </div>
-      <div class="forca-wrap" id="forcaWrap">
-        <div class="forca-barra"><div class="forca-fill" id="forcaFill"></div></div>
-        <span class="forca-label" id="forcaLabel"></span>
-      </div>
-      <span class="msg-erro" id="erroCadSenha">A senha deve ter pelo menos 6 caracteres.</span>
-    </div>
-
-    <div class="field">
-      <label for="cadConfSenha">Confirmar senha</label>
-      <div class="input-wrap">
-        <span class="icon">🔐</span>
-        <input type="password" id="cadConfSenha" placeholder="Repita a senha"
-               oninput="limparErro('cadConfSenha')" />
-        <button type="button" class="toggle-senha" onclick="toggleSenha('cadConfSenha', this)">👁️</button>
-      </div>
-      <span class="msg-erro" id="erroCadConfSenha">As senhas não coincidem.</span>
-    </div>
-
-    <!-- LGPD consent -->
-    <label class="lgpd-check">
-      <input type="checkbox" id="cadLGPD" onchange="limparErro('cadLGPD')" />
-      Concordo com a
-      <a href="privacidade.html" target="_blank">&nbsp;Política de Privacidade&nbsp;</a>
-      e o tratamento dos meus dados conforme a <strong>&nbsp;LGPD</strong>.
-    </label>
-    <span class="msg-erro" id="erroCadLGPD">Você precisa aceitar os termos para continuar.</span>
-
-    <button type="submit" class="btn-principal" id="btnCadastro">
-      <span class="spinner"></span>
-      <span class="btn-texto">Criar conta</span>
-    </button>
-
-  </form>
-
-  <!-- FOOTER DO CARD -->
-  <div class="card-footer" id="cardFooterLink">
-    Não tem conta?
-    <a onclick="mostrarAba('cadastro')">Criar conta grátis</a>
-  </div>
-</div>
-
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-
-<script>
-// =====================================================
-//  USUÁRIOS MOCKADOS (simula banco de dados)
-// =====================================================
-const USUARIOS = [
-  { email: "teste@raizes.com", senha: "123456", nome: "Maria Nordeste" },
-  { email: "admin@raizes.com", senha: "admin123", nome: "Admin Raízes" },
-];
-
-// =====================================================
-//  ABAS
-// =====================================================
-function mostrarAba(aba) {
-  const isLogin = aba === "login";
-  document.getElementById("formLogin").style.display    = isLogin ? "flex" : "none";
-  document.getElementById("formCadastro").style.display = isLogin ? "none" : "flex";
-  document.getElementById("tabLogin").classList.toggle("active", isLogin);
-  document.getElementById("tabCadastro").classList.toggle("active", !isLogin);
-  document.getElementById("cardFooterLink").innerHTML = isLogin
-    ? `Não tem conta? <a onclick="mostrarAba('cadastro')">Criar conta grátis</a>`
-    : `Já tem conta? <a onclick="mostrarAba('login')">Entrar</a>`;
-  document.getElementById("alertaGeral").classList.remove("visivel");
-}
-
-// =====================================================
-//  SUBMIT LOGIN
-// =====================================================
-function submitLogin(e) {
-  e.preventDefault();
-  let valido = true;
-
-  const email = document.getElementById("loginEmail").value.trim();
-  const senha = document.getElementById("loginSenha").value;
-
-  if (!validarEmail(email)) {
-    mostrarErro("loginEmail", "erroLoginEmail"); valido = false;
-  }
-  if (!senha) {
-    mostrarErro("loginSenha", "erroLoginSenha"); valido = false;
-  }
-  if (!valido) return;
-
-  // Simula requisição
-  setLoading("btnLogin", true);
-  setTimeout(() => {
-    setLoading("btnLogin", false);
-
-    const usuario = USUARIOS.find(u => u.email === email && u.senha === senha);
-    if (usuario) {
-      // Salva sessão simulada
-      sessionStorage.setItem("usuarioLogado", JSON.stringify({
-        nome: usuario.nome,
-        email: usuario.email,
-        pontos: 240,
-      }));
-      mostrarToast(`Bem-vindo(a), ${usuario.nome.split(" ")[0]}! 🎉`, "sucesso");
-      setTimeout(() => { window.location.href = "../index.html"; }, 1200);
-    } else {
-      const alerta = document.getElementById("alertaGeral");
-      alerta.textContent = "❌ E-mail ou senha incorretos. Tente novamente.";
-      alerta.classList.add("visivel");
+    function salvarUsuario(usuario) {
+      const dados = JSON.stringify(usuario);
+      localStorage.setItem(USUARIO_KEY, dados);
+      sessionStorage.setItem(USUARIO_KEY, dados);
+      return `../index.html?usuario=${encodeURIComponent(dados)}`;
     }
-  }, 1200);
-}
 
-// =====================================================
-//  SUBMIT CADASTRO
-// =====================================================
-function submitCadastro(e) {
-  e.preventDefault();
-  let valido = true;
+    function mostrarAba(aba) {
+      const isLogin = aba === "login";
+      document.getElementById("formLogin").style.display = isLogin ? "flex" : "none";
+      document.getElementById("formCadastro").style.display = isLogin ? "none" : "flex";
+      document.getElementById("tabLogin").classList.toggle("active", isLogin);
+      document.getElementById("tabCadastro").classList.toggle("active", !isLogin);
+      document.getElementById("cardFooterLink").innerHTML = isLogin
+        ? `Não tem conta? <a onclick="mostrarAba('cadastro')">Criar conta grátis</a>`
+        : `Já tem conta? <a onclick="mostrarAba('login')">Entrar</a>`;
+      document.getElementById("alertaGeral").classList.remove("visivel");
+    }
 
-  const nome     = document.getElementById("cadNome").value.trim();
-  const email    = document.getElementById("cadEmail").value.trim();
-  const cpf      = document.getElementById("cadCPF").value.replace(/\D/g,"");
-  const tel      = document.getElementById("cadTel").value.replace(/\D/g,"");
-  const senha    = document.getElementById("cadSenha").value;
-  const confSenha= document.getElementById("cadConfSenha").value;
-  const lgpd     = document.getElementById("cadLGPD").checked;
+    function submitLogin(e) {
+      e.preventDefault();
+      let valido = true;
+      const email = document.getElementById("loginEmail").value.trim();
+      const senha = document.getElementById("loginSenha").value;
 
-  if (nome.split(" ").length < 2) {
-    mostrarErro("cadNome", "erroCadNome"); valido = false;
-  }
-  if (!validarEmail(email)) {
-    mostrarErro("cadEmail", "erroCadEmail"); valido = false;
-  }
-  if (cpf.length !== 11) {
-    mostrarErro("cadCPF", "erroCadCPF"); valido = false;
-  }
-  if (tel.length < 10) {
-    mostrarErro("cadTel", "erroCadTel"); valido = false;
-  }
-  if (senha.length < 6) {
-    mostrarErro("cadSenha", "erroCadSenha"); valido = false;
-  }
-  if (senha !== confSenha) {
-    mostrarErro("cadConfSenha", "erroCadConfSenha"); valido = false;
-  }
-  if (!lgpd) {
-    mostrarErro("cadLGPD", "erroCadLGPD"); valido = false;
-  }
-  if (!valido) return;
+      if (!validarEmail(email)) { mostrarErro("loginEmail", "erroLoginEmail"); valido = false; }
+      if (!senha) { mostrarErro("loginSenha", "erroLoginSenha"); valido = false; }
+      if (!valido) return;
 
-  setLoading("btnCadastro", true);
-  setTimeout(() => {
-    setLoading("btnCadastro", false);
-    // Salva sessão simulada
-    sessionStorage.setItem("usuarioLogado", JSON.stringify({
-      nome, email, pontos: 0,
-    }));
-    mostrarToast("Conta criada com sucesso! 🎉", "sucesso");
-    setTimeout(() => { window.location.href = "../index.html"; }, 1200);
-  }, 1500);
-}
+      setLoading("btnLogin", true);
+      setTimeout(() => {
+        setLoading("btnLogin", false);
+        const usuario = USUARIOS.find(u => u.email === email && u.senha === senha);
+        if (usuario) {
+          const destino = salvarUsuario({
+            nome: usuario.nome,
+            email: usuario.email,
+            pontos: 240,
+          });
+          mostrarToast(`Bem-vindo(a), ${usuario.nome.split(" ")[0]}!`, "sucesso");
+          setTimeout(() => { window.location.href = destino; }, 900);
+        } else {
+          const alerta = document.getElementById("alertaGeral");
+          alerta.textContent = "E-mail ou senha incorretos. Tente novamente.";
+          alerta.classList.add("visivel");
+        }
+      }, 900);
+    }
 
-// =====================================================
-//  ENTRAR SEM LOGIN
-// =====================================================
-function entrarSemLogin() {
-  // Visitante também entra na sessão, só que sem cadastro real.
-  // Se fechar o navegador, esses dados temporários podem sumir.
-  // Mesmo assim, deixei pontos aqui para ele participar do programa fidelidade
-  // durante a navegação, igual acontece com cliente logado.
-  sessionStorage.setItem("usuarioLogado", JSON.stringify({
-    nome: "Visitante", email: "", pontos: 0,
-  }));
-  window.location.href = "../index.html";
-}
+    function submitCadastro(e) {
+      e.preventDefault();
+      let valido = true;
+      const nome = document.getElementById("cadNome").value.trim();
+      const email = document.getElementById("cadEmail").value.trim();
+      const cpf = document.getElementById("cadCPF").value.replace(/\D/g,"");
+      const tel = document.getElementById("cadTel").value.replace(/\D/g,"");
+      const senha = document.getElementById("cadSenha").value;
+      const confSenha = document.getElementById("cadConfSenha").value;
+      const lgpd = document.getElementById("cadLGPD").checked;
 
-// =====================================================
-//  HELPERS DE UI
-// =====================================================
-function mostrarErro(inputId, erroId) {
-  document.getElementById(inputId).classList.add("erro");
-  document.getElementById(erroId).classList.add("visivel");
-}
-function limparErro(inputId) {
-  const el = document.getElementById(inputId);
-  if (!el) return;
-  el.classList.remove("erro");
-  // Remove mensagem de erro associada
-  const erroId = "erro" + inputId.charAt(0).toUpperCase() + inputId.slice(1);
-  const erroEl = document.getElementById(erroId);
-  if (erroEl) erroEl.classList.remove("visivel");
-}
-function setLoading(btnId, on) {
-  document.getElementById(btnId).classList.toggle("loading", on);
-}
-function validarEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-function toggleSenha(inputId, btn) {
-  const input = document.getElementById(inputId);
-  const visivel = input.type === "text";
-  input.type = visivel ? "password" : "text";
-  btn.textContent = visivel ? "👁️" : "🙈";
-}
-function esqueciSenha() {
-  mostrarToast("Enviamos um link de recuperação para seu e-mail! 📧", "sucesso");
-}
+      if (nome.split(" ").length < 2) { mostrarErro("cadNome", "erroCadNome"); valido = false; }
+      if (!validarEmail(email)) { mostrarErro("cadEmail", "erroCadEmail"); valido = false; }
+      if (cpf.length !== 11) { mostrarErro("cadCPF", "erroCadCPF"); valido = false; }
+      if (tel.length < 10) { mostrarErro("cadTel", "erroCadTel"); valido = false; }
+      if (senha.length < 6) { mostrarErro("cadSenha", "erroCadSenha"); valido = false; }
+      if (senha !== confSenha) { mostrarErro("cadConfSenha", "erroCadConfSenha"); valido = false; }
+      if (!lgpd) { mostrarErro("cadLGPD", "erroCadLGPD"); valido = false; }
+      if (!valido) return;
 
-// FORÇA DA SENHA
-function verificarForca(input) {
-  const senha = input.value;
-  const wrap = document.getElementById("forcaWrap");
-  const fill = document.getElementById("forcaFill");
-  const label = document.getElementById("forcaLabel");
+      setLoading("btnCadastro", true);
+      setTimeout(() => {
+        setLoading("btnCadastro", false);
+        const destino = salvarUsuario({ nome, email, pontos: 0 });
+        mostrarToast("Conta criada com sucesso!", "sucesso");
+        setTimeout(() => { window.location.href = destino; }, 900);
+      }, 1000);
+    }
 
-  if (!senha) { wrap.classList.remove("visivel"); return; }
-  wrap.classList.add("visivel");
+    function entrarSemLogin() {
+      const destino = salvarUsuario({
+        nome: "Visitante",
+        email: "",
+        pontos: 0,
+      });
+      window.location.href = destino;
+    }
 
-  let forca = 0;
-  if (senha.length >= 6)  forca++;
-  if (senha.length >= 10) forca++;
-  if (/[A-Z]/.test(senha)) forca++;
-  if (/[0-9]/.test(senha)) forca++;
-  if (/[^A-Za-z0-9]/.test(senha)) forca++;
+    function mostrarErro(inputId, erroId) {
+      document.getElementById(inputId).classList.add("erro");
+      document.getElementById(erroId).classList.add("visivel");
+    }
+    function limparErro(inputId) {
+      const el = document.getElementById(inputId);
+      if (!el) return;
+      el.classList.remove("erro");
+      const erroId = "erro" + inputId.charAt(0).toUpperCase() + inputId.slice(1);
+      document.getElementById(erroId)?.classList.remove("visivel");
+    }
+    function setLoading(btnId, on) {
+      document.getElementById(btnId).classList.toggle("loading", on);
+    }
+    function validarEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+    function toggleSenha(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const visivel = input.type === "text";
+      input.type = visivel ? "password" : "text";
+      btn.textContent = visivel ? "Ver" : "Ocultar";
+    }
+    function esqueciSenha() {
+      mostrarToast("Enviamos um link de recuperação para seu e-mail.", "sucesso");
+    }
+    function verificarForca(input) {
+      const senha = input.value;
+      const wrap = document.getElementById("forcaWrap");
+      const fill = document.getElementById("forcaFill");
+      const label = document.getElementById("forcaLabel");
+      if (!senha) { wrap.classList.remove("visivel"); return; }
+      wrap.classList.add("visivel");
 
-  const configs = [
-    { pct:"20%", cor:"#E74C3C", txt:"Muito fraca" },
-    { pct:"40%", cor:"#E67E22", txt:"Fraca" },
-    { pct:"60%", cor:"#F1C40F", txt:"Razoável" },
-    { pct:"80%", cor:"#2ECC71", txt:"Forte" },
-    { pct:"100%",cor:"#1E8A4C", txt:"Muito forte 💪" },
-  ];
-  const c = configs[forca - 1] || configs[0];
-  fill.style.width = c.pct;
-  fill.style.background = c.cor;
-  label.textContent = c.txt;
-  label.style.color = c.cor;
-}
+      let forca = 0;
+      if (senha.length >= 6) forca++;
+      if (senha.length >= 10) forca++;
+      if (/[A-Z]/.test(senha)) forca++;
+      if (/[0-9]/.test(senha)) forca++;
+      if (/[^A-Za-z0-9]/.test(senha)) forca++;
 
-// MÁSCARAS
-function mascaraCPF(input) {
-  let v = input.value.replace(/\D/g,"").slice(0,11);
-  v = v.replace(/(\d{3})(\d)/,"$1.$2");
-  v = v.replace(/(\d{3})(\d)/,"$1.$2");
-  v = v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
-  input.value = v;
-}
-function mascaraTel(input) {
-  let v = input.value.replace(/\D/g,"").slice(0,11);
-  if (v.length <= 10) v = v.replace(/(\d{2})(\d)/,"($1) $2").replace(/(\d{4})(\d)/,"$1-$2");
-  else                v = v.replace(/(\d{2})(\d)/,"($1) $2").replace(/(\d{5})(\d)/,"$1-$2");
-  input.value = v;
-}
+      const configs = [
+        { pct:"20%", cor:"#b23b2a", txt:"Muito fraca" },
+        { pct:"40%", cor:"#C9902E", txt:"Fraca" },
+        { pct:"60%", cor:"#d6b94c", txt:"Razoável" },
+        { pct:"80%", cor:"#4f9b61", txt:"Forte" },
+        { pct:"100%", cor:"#356B45", txt:"Muito forte" },
+      ];
+      const c = configs[forca - 1] || configs[0];
+      fill.style.width = c.pct;
+      fill.style.background = c.cor;
+      label.textContent = c.txt;
+      label.style.color = c.cor;
+    }
+    function mascaraCPF(input) {
+      let v = input.value.replace(/\D/g,"").slice(0,11);
+      v = v.replace(/(\d{3})(\d)/,"$1.$2");
+      v = v.replace(/(\d{3})(\d)/,"$1.$2");
+      v = v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+      input.value = v;
+    }
+    function mascaraTel(input) {
+      let v = input.value.replace(/\D/g,"").slice(0,11);
+      if (v.length <= 10) v = v.replace(/(\d{2})(\d)/,"($1) $2").replace(/(\d{4})(\d)/,"$1-$2");
+      else v = v.replace(/(\d{2})(\d)/,"($1) $2").replace(/(\d{5})(\d)/,"$1-$2");
+      input.value = v;
+    }
+    function mostrarToast(msg, tipo="") {
+      const toast = document.getElementById("toast");
+      toast.textContent = msg;
+      toast.className = "toast " + tipo;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 3000);
+    }
 
-// TOAST
-function mostrarToast(msg, tipo="") {
-  const t = document.getElementById("toast");
-  t.textContent = msg;
-  t.className = "toast " + tipo;
-  t.classList.add("show");
-  setTimeout(() => t.classList.remove("show"), 3000);
-}
-
-// Pré-popula e-mail de teste para facilitar demo
-// (remova em produção)
-document.getElementById("loginEmail").value = "teste@raizes.com";
-</script>
+    document.getElementById("loginEmail").value = "teste@raizes.com";
+  </script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Baião Burguer">
+  <rect width="600" height="360" rx="36" fill="#f4d59f"/>
+  <circle cx="105" cy="78" r="46" fill="#d84f2a" opacity=".9"/>
+  <path d="M146 251c83 39 222 38 310-1 28-13 34 38 5 49-97 36-231 37-323 0-31-12-21-62 8-48z" fill="#7a3f1d"/>
+  <path d="M116 183c21-75 100-111 184-111s161 38 184 111c-90 32-278 32-368 0z" fill="#d98b2b"/>
+  <path d="M122 196c93 27 258 27 352 0 12-4 22 9 15 20-20 31-362 31-382 0-7-11 3-24 15-20z" fill="#f7c85f"/>
+  <path d="M149 224c78 28 224 28 302 0" fill="none" stroke="#2e7d4f" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="235" cy="117" r="8" fill="#fff2c6"/><circle cx="290" cy="101" r="7" fill="#fff2c6"/><circle cx="346" cy="121" r="8" fill="#fff2c6"/>
+</svg>

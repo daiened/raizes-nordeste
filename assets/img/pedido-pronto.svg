@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Pedido pronto">
+  <rect width="600" height="360" rx="36" fill="#f1d7ae"/>
+  <circle cx="300" cy="180" r="104" fill="#2f8a57"/>
+  <path d="M249 179l34 34 74-84" fill="none" stroke="#fff6df" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 292c70 34 190 36 260 0" fill="none" stroke="#8b4b24" stroke-width="18" stroke-linecap="round" opacity=".55"/>
+</svg>

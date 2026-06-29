@@ -30,3 +30,7 @@ nome: "Maria Nordeste"
 { email: "admin@raizes.com", senha: "admin123", nome: "Admin Raízes" },
 
 Ou use "Continuar como visitante".
+
+##
+DAIENE SANTOS DUARTE
+ANALISTA II DE SISTEMAS (CORE BANCÁRIO) - TOTVS DIMENSA

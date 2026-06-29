@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Açaí do Sertão">
+  <rect width="600" height="360" rx="36" fill="#eed4e7"/>
+  <path d="M182 120h236l-28 166c-7 40-43 66-90 66s-83-26-90-66z" fill="#6a234f"/>
+  <ellipse cx="300" cy="120" rx="118" ry="38" fill="#842e68"/>
+  <circle cx="250" cy="112" r="18" fill="#f5d76a"/><circle cx="302" cy="102" r="17" fill="#f7f1dd"/><circle cx="351" cy="116" r="18" fill="#d3a04c"/>
+  <path d="M226 76c43-22 102-22 147 0" stroke="#f2bb40" stroke-width="15" stroke-linecap="round"/>
+</svg>

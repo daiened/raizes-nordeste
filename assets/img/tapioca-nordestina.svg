@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Tapioca Nordestina">
+  <rect width="600" height="360" rx="36" fill="#f7ead3"/>
+  <ellipse cx="300" cy="214" rx="204" ry="82" fill="#fff9ea" stroke="#d8a85b" stroke-width="10"/>
+  <path d="M139 214c88-85 234-91 322 0-83 33-239 33-322 0z" fill="#fff3d1"/>
+  <path d="M219 196c44-28 117-27 162 0" stroke="#2f8a57" stroke-width="18" stroke-linecap="round"/>
+  <path d="M190 224h220" stroke="#c2562d" stroke-width="16" stroke-linecap="round"/>
+</svg>

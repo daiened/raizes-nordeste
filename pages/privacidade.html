@@ -3,123 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidade – Raízes do Nordeste</title>
+  <title>Política de Privacidade - Raízes do Nordeste</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #B83227; --accent: #D4820A;
-      --text: #1C1208; --text2: #5C4A38; --text3: #9C886A;
-      --bg: #FDF6EE; --border: #E8DDD0;
-      --font-display: 'Playfair Display', serif;
-      --font-body: 'DM Sans', system-ui, sans-serif;
+      --primary: #B65332;
+      --accent: #C9902E;
+      --text: #2B1D16;
+      --text2: #5F4A3E;
+      --text3: #8A766B;
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --border: #E8D8C7;
+      --font-display: 'Lora', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
     }
-    body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.7; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
     nav {
-      background: #fff; border-bottom: 1px solid var(--border);
-      padding: 14px 24px; display: flex; align-items: center; gap: 12px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     nav a { text-decoration: none; }
-    .nav-logo { font-family: var(--font-display); font-size: 20px; color: var(--primary); font-weight: 900; }
-    .nav-logo span { color: var(--accent); }
-    .back-link { font-size: 13px; color: var(--accent); margin-left: auto; text-decoration: underline; cursor: pointer; }
-    .container { max-width: 760px; margin: 40px auto; padding: 0 20px 60px; }
-    h1 { font-family: var(--font-display); font-size: 32px; color: var(--primary); margin-bottom: 6px; }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .nav-logo span { color: #356B45; }
+    .back-link {
+      font-size: 13px;
+      color: var(--primary);
+      margin-left: auto;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
     .subtitle { font-size: 13px; color: var(--text3); margin-bottom: 32px; }
-    h2 { font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 10px; border-left: 3px solid var(--primary); padding-left: 12px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+      margin: 28px 0 10px;
+      border-left: 3px solid var(--primary);
+      padding-left: 12px;
+    }
     p { font-size: 14px; color: var(--text2); margin-bottom: 10px; }
     ul { padding-left: 20px; margin-bottom: 10px; }
     li { font-size: 14px; color: var(--text2); margin-bottom: 6px; }
     .badge {
-      display: inline-block; background: var(--primary); color: #fff;
-      font-size: 11px; font-weight: 700; padding: 2px 10px;
-      border-radius: 10px; margin-bottom: 20px;
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
     .contato-box {
-      background: #fff; border: 1px solid var(--border); border-radius: 12px;
-      padding: 18px 20px; margin-top: 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-top: 30px;
     }
     .contato-box p { margin: 0; }
     .contato-box strong { color: var(--primary); }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="../index.html"><div class="nav-logo">Raízes <span>do Nordeste</span></div></a>
+    <a class="back-link" href="../index.html">Voltar ao cardápio</a>
+  </nav>
 
-  <!-- se abrir pra ler a Política de Privacidade...-->
-<nav>
-  <a href="../index.html"><div class="nav-logo">Raízes <span>do Nordeste</span></div></a>
-  <a class="back-link" href="../index.html">← Voltar ao cardápio</a>
-</nav>
+  <div class="container">
+    <span class="badge">LGPD - Lei 13.709/2018</span>
+    <h1>Política de Privacidade</h1>
+    <p class="subtitle">Última atualização: maio de 2026</p>
 
-<div class="container">
-  <span class="badge">🔒 LGPD – Lei 13.709/2018</span>
-  <h1>Política de Privacidade</h1>
-  <p class="subtitle">Última atualização: maio de 2026</p>
+    <h2>1. Quem somos</h2>
+    <p>A <strong>Rede Raízes do Nordeste</strong> é uma rede de lanchonetes que opera em múltiplas unidades. Somos os controladores dos seus dados pessoais, conforme definido pela LGPD.</p>
 
-  <h2>1. Quem somos</h2>
-  <p>A <strong>Rede Raízes do Nordeste</strong> é uma rede de lanchonetes que opera em múltiplas unidades. Somos os controladores dos seus dados pessoais, conforme definido pela LGPD.</p>
+    <h2>2. Quais dados coletamos</h2>
+    <ul>
+      <li><strong>Cadastro:</strong> nome, e-mail, CPF e telefone.</li>
+      <li><strong>Pedidos:</strong> itens, unidade, canal utilizado e horário.</li>
+      <li><strong>Pagamento:</strong> dados necessários para processamento por gateway externo certificado. Não armazenamos dados de cartão.</li>
+      <li><strong>Fidelidade:</strong> pontos acumulados e histórico de resgates.</li>
+      <li><strong>Navegação:</strong> cookies técnicos e preferências salvas com consentimento.</li>
+    </ul>
 
-  <h2>2. Quais dados coletamos</h2>
-  <ul>
-    <li><strong>Cadastro:</strong> nome, e-mail, CPF e telefone</li>
-    <li><strong>Pedidos:</strong> itens, unidade, canal utilizado (App, Web ou Totem) e horário</li>
-    <li><strong>Pagamento:</strong> apenas os dados necessários para processamento via gateway externo certificado (PCI-DSS). Não armazenamos dados de cartão.</li>
-    <li><strong>Fidelidade:</strong> pontos acumulados e histórico de resgates</li>
-    <li><strong>Navegação:</strong> cookies técnicos e de preferência (com seu consentimento)</li>
-  </ul>
+    <h2>3. Para que usamos seus dados</h2>
+    <ul>
+      <li>Processar e entregar pedidos.</li>
+      <li>Operar o programa Raízes Fiel.</li>
+      <li>Enviar promoções e comunicações quando houver consentimento.</li>
+      <li>Melhorar atendimento, serviços e cardápio.</li>
+      <li>Cumprir obrigações legais e regulatórias.</li>
+    </ul>
 
-  <h2>3. Para que usamos seus dados</h2>
-  <ul>
-    <li>Processar e entregar seus pedidos</li>
-    <li>Operar o programa de fidelidade Raízes Fiel</li>
-    <li>Enviar promoções e comunicações (somente com consentimento)</li>
-    <li>Melhorar nossos serviços e cardápio</li>
-    <li>Cumprir obrigações legais e regulatórias</li>
-  </ul>
+    <h2>4. Base legal para o tratamento</h2>
+    <p>Tratamos seus dados com base nas hipóteses previstas no Art. 7º da LGPD, incluindo consentimento, execução de contrato, legítimo interesse e cumprimento de obrigação legal.</p>
 
-  <h2>4. Base legal para o tratamento</h2>
-  <p>Tratamos seus dados com base nas seguintes hipóteses previstas no Art. 7º da LGPD:</p>
-  <ul>
-    <li><strong>Consentimento</strong> (Art. 7º, I) – para comunicações e cookies opcionais</li>
-    <li><strong>Execução de contrato</strong> (Art. 7º, V) – para processar pedidos e pagamentos</li>
-    <li><strong>Legítimo interesse</strong> (Art. 7º, IX) – para melhorias de serviço e segurança</li>
-  </ul>
+    <h2>5. Seus direitos como titular</h2>
+    <p>Conforme o Art. 18 da LGPD, você pode solicitar acesso, correção, portabilidade, anonimização, bloqueio, eliminação ou revogação de consentimento.</p>
 
-  <h2>5. Seus direitos como titular</h2>
-  <p>Conforme o Art. 18 da LGPD, você tem direito a:</p>
-  <ul>
-    <li>Confirmar a existência de tratamento dos seus dados</li>
-    <li>Acessar seus dados a qualquer momento</li>
-    <li>Corrigir dados incompletos ou desatualizados</li>
-    <li>Solicitar anonimização, bloqueio ou eliminação</li>
-    <li>Revogar o consentimento a qualquer momento</li>
-    <li>Portabilidade dos dados</li>
-  </ul>
+    <h2>6. Compartilhamento de dados</h2>
+    <p>Compartilhamos dados apenas quando necessário para pagamento, entrega, segurança, suporte técnico ou atendimento a exigências legais. Não vendemos seus dados a terceiros.</p>
 
-  <h2>6. Compartilhamento de dados</h2>
-  <p>Seus dados podem ser compartilhados com:</p>
-  <ul>
-    <li><strong>Gateway de pagamento externo</strong> – somente dados necessários à transação</li>
-    <li><strong>Serviços de entrega</strong> – quando aplicável</li>
-    <li><strong>Autoridades regulatórias</strong> – quando exigido por lei</li>
-  </ul>
-  <p>Não vendemos seus dados a terceiros.</p>
+    <h2>7. Segurança e retenção</h2>
+    <p>Usamos medidas técnicas e organizacionais para proteger seus dados. As informações ficam armazenadas pelo período necessário para cumprir a finalidade do tratamento ou exigências legais.</p>
 
-  <h2>7. Segurança e retenção</h2>
-  <p>Adotamos medidas técnicas e organizacionais para proteger seus dados, incluindo criptografia em trânsito (TLS) e em repouso. Os dados são retidos pelo período necessário à finalidade do tratamento ou conforme exigido por lei.</p>
+    <h2>8. Cookies</h2>
+    <p>Usamos cookies essenciais para funcionamento e cookies opcionais para preferência e personalização. Você pode escolher “Só essenciais” no banner de consentimento.</p>
 
-  <h2>8. Cookies</h2>
-  <p>Utilizamos cookies essenciais (necessários para o funcionamento) e cookies opcionais (personalização e análise). Você pode gerenciar suas preferências a qualquer momento pela opção "Só essenciais" no banner.</p>
-
-  <h2>9. Encarregado de Dados (DPO)</h2>
-  <div class="contato-box">
-    <p><strong>Rede Raízes do Nordeste – DPO</strong><br>
-    E-mail: <strong>privacidade@raizesnordeste.com.br</strong><br>
-    Para exercer seus direitos, envie uma solicitação com identificação no e-mail acima.<br>
-    Respondemos em até <strong>15 dias úteis</strong>, conforme prazo legal.</p>
+    <h2>9. Encarregado de Dados</h2>
+    <div class="contato-box">
+      <p><strong>Rede Raízes do Nordeste - DPO</strong><br>
+      E-mail: <strong>privacidade@raizesnordeste.com.br</strong><br>
+      Para exercer seus direitos, envie uma solicitação com identificação. Respondemos em até <strong>15 dias úteis</strong>.</p>
+    </div>
   </div>
-</div>
-
 </body>
 </html>

@@ -5,25 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raízes do Nordeste</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" /> 
-  <!-- para os emojis -->
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .nav-usuario {
-      font-size: 13px; font-weight: 600; color: var(--text2, #5C4A38);
-      background: var(--bg, #FDF6EE); border: 1px solid var(--border, #E8DDD0);
-      padding: 5px 12px; border-radius: 20px; cursor: pointer;
-      font-family: var(--font-body, sans-serif); display: flex; align-items: center; gap: 6px;
-    }
-    .nav-usuario:hover { border-color: var(--primary, #B83227); color: var(--primary, #B83227); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 <body>
-<!-- TODO DAIENE - Mudar encoding p UTF8 VSCODE-->
-  <!-- ======= LGPD BANNER ======= -->
   <div class="lgpd-bar" id="lgpdBar">
     <span>
-      🔒 <strong>LGPD:</strong> usamos cookies e seus dados para personalizar pedidos e o programa de fidelidade.
+      <strong>LGPD:</strong> usamos cookies e alguns dados para pedidos, pagamento e fidelidade.
       <a href="pages/privacidade.html" target="_blank">Ver política de privacidade</a>
     </span>
     <div class="lgpd-actions">
@@ -32,42 +20,35 @@
     </div>
   </div>
 
-  <!-- ======= NAVBAR ======= -->
   <nav class="navbar">
     <div class="nav-logo">Raízes <span>do Nordeste</span></div>
     <div class="nav-right">
-      <button class="nav-usuario" id="navUsuario" onclick="abrirPerfilUsuario()">👤 ...</button>
-      <div class="nav-points" id="navPoints">🎁 240 pts</div>
+      <button class="nav-usuario" id="navUsuario" onclick="abrirPerfilUsuario()">Perfil</button>
+      <div class="nav-points" id="navPoints">240 pts</div>
       <button class="nav-cart-btn" onclick="abrirCarrinho()">
-        🛒 Carrinho <span class="cart-badge" id="cartBadge">0</span>
+        Carrinho <span class="cart-badge" id="cartBadge">0</span>
       </button>
-      <button class="nav-menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="nav-menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">Menu</button>
     </div>
   </nav>
 
-  <!-- ======= CANAL TABS ======= -->
   <div class="canal-bar">
-    <button class="canal-tab active" id="tab-App" onclick="setCanal('App')">📱 App</button>
-    <button class="canal-tab" id="tab-Web" onclick="setCanal('Web')">🌐 Web</button>
-    <button class="canal-tab" id="tab-Totem" onclick="setCanal('Totem')">🖥️ Totem</button>
+    <button class="canal-tab active" id="tab-App" onclick="setCanal('App')">App</button>
+    <button class="canal-tab" id="tab-Web" onclick="setCanal('Web')">Web</button>
+    <button class="canal-tab" id="tab-Totem" onclick="setCanal('Totem')">Totem</button>
   </div>
 
-  <!-- ======= TOTEM BANNER ======= -->
   <div class="totem-banner" id="totemBanner" style="display:none">
-    🖥️ <strong>Modo Totem</strong> — Retirar no balcão ou comer aqui?
-    <button onclick="setTotemModo('balcao')">🥡 Balcão</button>
-    <button onclick="setTotemModo('mesa')">🪑 Mesa</button>
+    <strong>Modo Totem</strong> - Retirar no balcão ou comer aqui?
+    <button onclick="setTotemModo('balcao')">Balcão</button>
+    <button onclick="setTotemModo('mesa')">Mesa</button>
   </div>
 
-  <!-- ======= PROMO BANNER ======= -->
   <div class="promo-banner">
-    🎉 <strong>Combo Família com 15% OFF</strong> — só até domingo! Código: <strong>RAIZES15</strong>
+    <strong>Combo Família com 15% OFF</strong> - só até domingo. Código: <strong>RAIZES15</strong>
   </div>
 
-  <!-- ======= MAIN ======= -->
   <main class="main" id="mainContent">
-
-    <!-- Fidelidade -->
     <div class="fidelidade-bar">
       <div>
         <div class="fid-pts" id="fidPoints">0 pts</div>
@@ -80,53 +61,42 @@
       <button class="fid-btn" onclick="alert('Resgate em breve disponível!')">Resgatar</button>
     </div>
 
-    <!-- Filtro de unidade -->
-    <div class="section-label">Selecione a unidade:</div>
+    <div class="section-label">Selecione a unidade</div>
     <div class="unit-row" id="unitRow"></div>
 
-    <!-- Categorias -->
-    <div class="section-label">Categorias:</div>
+    <div class="section-label">Categorias</div>
     <div class="cat-row" id="catRow"></div>
 
-    <!-- Busca -->
     <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="🔍 Buscar no cardápio..." oninput="filtrarCardapio()" />
+      <input type="text" id="searchInput" placeholder="Buscar no cardápio..." oninput="filtrarCardapio()" />
     </div>
 
-    <!-- Grid de produtos -->
     <div class="grid" id="produtosGrid"></div>
-
   </main>
 
-  <!-- TODO aqui-->
-  <!-- ======= STATUS DO PEDIDO (oculto inicialmente) ======= -->
   <div class="status-screen" id="statusScreen" style="display:none">
-    <div class="status-emoji">🎉</div>
+    <img class="status-img" src="assets/img/pedido-pronto.svg" alt="Pedido pronto" />
     <h2>Pedido confirmado!</h2>
     <p class="status-sub">Acompanhe o status em tempo real</p>
     <div class="status-track" id="statusTrack"></div>
     <p class="status-note" id="statusNote">Atualizando automaticamente...</p>
-    <button class="back-btn" onclick="voltarMenu()">← Fazer novo pedido</button>
+    <button class="back-btn" onclick="voltarMenu()">Fazer novo pedido</button>
   </div>
 
-  <!-- ======= OVERLAY CARRINHO ======= -->
   <div class="overlay" id="overlay" onclick="fecharCarrinho()"></div>
 
-  <!-- ======= DRAWER CARRINHO ======= -->
   <div class="drawer" id="drawer">
     <div class="drawer-head">
       <h3>Seu pedido</h3>
-      <button class="close-btn" onclick="fecharCarrinho()">✕</button>
+      <button class="close-btn" onclick="fecharCarrinho()" aria-label="Fechar carrinho">x</button>
     </div>
     <div class="cart-items" id="cartItems"></div>
     <div class="cart-footer" id="cartFooter"></div>
   </div>
 
-  <script src="js/auth.js?v=2"></script>
-  <script src="js/dados.js?v=2"></script>
-  <script src="js/carrinho.js?v=2"></script>
-  <script src="js/app.js?v=2"></script>
-
-  
+  <script src="js/auth.js?v=5"></script>
+  <script src="js/dados.js?v=5"></script>
+  <script src="js/carrinho.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
 </body>
 </html>
